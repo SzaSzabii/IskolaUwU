@@ -19,7 +19,9 @@
     }
     #id{
         border: 1px solid white;
-        
+    }
+    p{
+        text-align: center;
     }
 </style>
 <body>
@@ -30,8 +32,8 @@
             <input type="number" id="nr" class="form-control mr-2">
             <button class="btn btn-success" onclick="rajzol(event)">Játék kezdés</button>
             <button class="btn btn-danger">Új játék</button>
-            <br><p id="szam"></p>
         </form>
+            <p>Kattintások száma: </p>
         <div class="row justify-content-center">
             <table onclick="pozicio(event)">
 
@@ -50,6 +52,8 @@
             document.querySelector('table').innerHTML=""
             win=false
             count=0
+            document.querySelector('p').innerHTML = 'Kattintások száma: '
+
             let n=+document.getElementById('nr').value
             if(n>2){
             randY=Math.floor(Math.random()*n)
@@ -93,12 +97,12 @@
                     e.target.classList.add('bg-dark')
                 }
                 if(x==randX && y==randY){
-                    document.querySelector('p').innerHTML = count
+                    document.querySelector('p').innerHTML += count
                 }
             }
             }
         }
-        
+
         
     </script>
 </body>
