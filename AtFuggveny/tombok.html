@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <ol></ol>    
+    <main>
+        <section>
+
+        </section>
+    </main>
+
+
+    <script>
+        let numbers=[10,14,12,10,47,89]
+        let animals=[cat,dog,ant]
+
+        let ulStr='<ul>'
+        
+        ulStr +=animals.map(item=>`<li>${item}</li>`).join('')
+        ulStr +='</ul>'
+        document.querySelector('main').innerHTML = ulStr
+
+
+        const uID=Math.random().toString(36).slice(2);
+        console.log(uID);
+
+        let szamok=[2,100,100,55,62,47,3,6,8,10,1,100,1000,5000]
+        //
+        console.log('Legutolsó szám',szamok.at(-1));
+        let user="Gyula"
+        console.log('Legutolsó karakter',szamok.at(0),' ',user.at(-1));
+
+        //
+            let ol=document.createElement('ol');
+            let li
+            for(let item of animals){
+                li=document.createElement('li');
+                li.textContent = item
+                ol.appendChild(li);
+            }
+            document.querySelector('section').appendChild(ol);
+        console.log(szamok);
+        szamok.forEach((item,index)=>console.log(item,index))
+        szamok.forEach((item)=>console.log(item))
+
+        let paros=[]
+        for(let item of szamok){
+            if(item%2==0)
+            paros.push(item)
+        }
+
+        console.log(paros)
+
+        //filter:
+        let paros2=szamok.filter(item=>item%2==0)
+        console.log(paros2)
+
+        //10-nél nagyobb:
+        let nagyobb10=szamok.filter(item=>item>10)
+        console.log(nagyobb10)
+
+        //find: 100-as van-e benne?? :):)
+        //hagyományosan keresés:
+        let keresettSzam2
+        for (let item of szamok){
+            if(item==100)
+            keresettSzam2=100
+        }
+        console.log(keresettSzam2? "igen":"nem")
+
+        //röviden
+        let keresettSzam=szamok.find(item=>item==100)
+        console.log(keresettSzam ? "benne van :)": "nincs benne :(")
+
+        //findIndex
+        let keresettIndex=szamok.findIndex(item=>item==100)
+        console.log('elso:',keresettIndex)
+
+        //find last
+        let lastIndex=szamok.findLastIndex(item=>item==100)
+        console.log('utolso',lastIndex)
+
+
+        //map: 100
+        let ujTomb=szamok.map(item=>`<li>${item}</li>`)
+        console.log(ujTomb)
+        let liStr=ujTomb.join('')
+        console.log(liStr)
+        document.querySelector('ul').innerHTML=liStr
+
+        let olStr=szamok.map(item=>`<li>${item}</li>`).join('')
+        document.querySelector('ol').innerHTML=olStr
+
+        //összeadás:
+
+        let s=0
+        for (let item of szamok){
+            s+=item
+        }
+
+        console.log(s)
+
+        //rövid összeadás:)
+        let s2=szamok.reduce((acc,item)=>acc+item,0)
+        console.log(s2)
+
+        let liStr2=szamok.reduce((acc,item)=>acc+`<li>${item}</li>`,``)
+        console.log(liStr2)
+
+        
+
+    </script>
+    
+</body>
+</html>

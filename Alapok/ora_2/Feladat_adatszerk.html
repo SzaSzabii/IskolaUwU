@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ol>
+
+    </ol>
+
+<script>
+        let szamok=[1,4,5,6,77,1,3,2,77,4]
+        for(let i=0;i<szamok.length;i++){
+            console.log(`index: ${i} - érték: ${szamok(i)}`)
+        }
+        for(let szam of szamok){
+            console.log(szam)
+        }
+        for(let i in szamok){
+            
+        }
+
+        let pers= {
+            nev:"Gyula",
+            szuletesiev:2000,
+            email:"Gyulamail"
+         }
+         for(let kulcs in pers)
+            console.log(kulcs)
+    
+        let lista="" 
+        for(let szam of szamok){
+            lista+=`<li>${szam}</li>`
+        }
+        console.log(lista) 
+        document.querySelector('ul').innerHTML=lista  
+    
+        let termekek=[
+            {nev:"alma",kg:100},
+            {nev:"korte",kg:50},
+            {nev:"dio",kg:20}
+    ]
+    let tblista=""
+        for(let obj of termeke){
+            console.log(obj.nevz,obj.kg)
+            tblista+=`<tr><td>${obj.nev}</td></tr>${obj.kg}</td></tr>`
+ }
+        let egyediszamok=[,,,new Set(szamok)]
+            console.log(szamok)
+            console.log(egyediszamok)
+        let szamok2=[100,200]
+        let ujTomb=[...szamok,...szamok2]
+        console.log(ujTomb)
+        ujTomb=[...ujTomb,1000]
+        ujTomb.push(1000000000000000)
+
+        let nagyobb=ujTomb.filter((szam)=>szam>100)
+        console.log(nagyobb)
+
+        let osztas=ujtoű.filter((szam)=>szam%2==0)
+        console.log(osztas)
+        for(let szam of ujTomb){
+            osztas+=`<li>${szam}</li>`
+        }
+        document.querySelector('ol').innerHTML=osztas4  
+
+
+    </script>
+</body>
+</html>

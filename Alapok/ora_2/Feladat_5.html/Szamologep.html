@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="stylee.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container" onclick="olvas(event)">
+    
+        <div class="row bg-info color white">0</div>
+        
+        <div class="row">
+            <div class="col border border-secondary">1</div>
+            <div class="col border border-secondary">2</div>
+            <div class="col border border-secondary">3</div>
+            <div class="col border border-secondary bg-success">+</div>
+
+            <div class="w-100"></div>
+
+            <div class="col border border-secondary">4</div>
+            <div class="col border border-secondary">5</div>
+            <div class="col border border-secondary">6</div>
+            <div class="col border border-secondary bg-success">-</div>
+            
+            <div class="w-100"></div>
+
+            <div class="col border border-secondary">7</div>
+            <div class="col border border-secondary">8</div>
+            <div class="col border border-secondary">9</div>
+            <div class="col border border-secondary bg-success">*</div>
+ 
+            <div class="w-100"></div>
+
+            <div class="col border border-secondary bg-danger">C</div>
+            <div class="col border border-secondary">0</div>
+            <div class="col border border-secondary bg-warning">=</div>
+            <div class="col border border-secondary bg-success">/</div>
+        </div>
+
+
+
+        <script>
+            //let teszt=1+3-6*4+10
+            //console.log(teszt,'eredmeny',event(teszt))
+            let str=""
+            
+            function olvas(e){
+                console.log(e.target.classList)
+                console.log("Tartalom",e.target.innerHTML)
+                if(e.target.classList.contains){
+                    
+                }
+                if(e.target.innerHTML=="="){
+                    console.log.event(target)
+                    document.querySelector(`result`).innerHTML=eval(str)
+                }
+                else{
+                    
+                str+=e.targer.innerHTML
+                console.log(str)
+                }
+            
+            }
+
+            
+        </script>
+</body>
+</html>

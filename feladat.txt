@@ -1,0 +1,30 @@
+1,
+	Operátor(okód(ID),név)
+	Hívások(tel szám(ID),kezd(ID),név,vége)
+	Eset(ekódIó(ID),enév)
+
+	fogadta[Operátor,Hívások]
+	beérkezett[Hívások,Eset,helyszín]
+2,
+	Vádlott(szem. szám(ID),név,lakcím)
+	Ügyvéd(ügyvéd kód(ID),név)
+	Ügy(ügyszám(ID), megnevezés)
+	Bíró(b kód(ID), bíró név)
+	
+	védi[Vádlott,Ügyvéd]
+	bűnös-e[Vádlott, Ügy]
+	ítéletet hoz[ügy,Bíró, ítélet]
+3,
+	Épület(Név(ID),Hely,Építés kezdete,Építés vége)
+	Munkás(Személyi szám(ID),Név,Munkakör)
+	Építész(Személyi szám(ID),Náv)
+
+	Tervezte(Épület, Építész)
+	Dolgozott(Épület, Munkás)
+4,
+	Operátor(okód(ID),név)
+	Hívások(tel szám(ID),kezd(ID),név,vége)
+	Eset(ekódIó(ID),enév)
+
+	fogadta[Operátor,Hívások]
+	beérkezett[Hívások,Eset,helyszín]

@@ -1,0 +1,15 @@
+div{
+background-color: lightblue;
+display: flex;
+justify-content: center;
+margin: auto;
+width: 500px;
+
+
+}
+p{
+background-color: yellow;
+border: solid black 4px;
+padding: 20px;
+margin: 20px;
+}

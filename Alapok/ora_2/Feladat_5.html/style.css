@@ -1,0 +1,36 @@
+.container{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.break{
+    width: 100%;
+}
+.box{
+    height: 4rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+.clear{
+    background-color: red;
+
+}
+.op{
+    background-color: yellow;
+}
+.equals{
+    background-color: green;
+}
+.resultBox{
+    height: 4rem;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Veletlenszam</title>
+
+    <style>
+        .container {
+            width: 300px;
+            margin: auto;
+            text-align: center;
+        }
+        .eredmeny{
+            border:solid 1px black;
+
+        }
+        .szam{
+            color: aqua;
+        }
+        .btn{
+            border-radius: 12px;
+            padding: 15px;
+            background-image: linear-gradient(green, yellow);
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+    <h1>Jó vagy fejszámolásban?</h1>
+    <input type="button" value="Új számokat kérek" class="btn" onclick="random()">
+    <p>
+            <span id="szam"> </span>
+            <i class="fa-solid fa-plus"></i>
+            <span id="szam1"> </span>
+            <i class="fa-solid fa-equals"></i>
+            <input type="text" onkeyup="eredmeny()" id="valasz">
+            <p>
+                <i class="fa-sharp fa-solid fa-question"></i>
+                <i class="fa-solid fa-thumbs-up"></i>
+                <i class="fa-solid fa-thumbs-down"></i>
+    </div>
+
+    <script>
+        function random(){
+        let v=Math.floor(Math.random()*100+1)
+        let v1=Math.floor(Math.random()*100+1)
+
+        document.getElementById("szam").innerHTML=v
+        document.getElementById("szam1").innerHTML=v1
+
+        let vszam=+document.getElementById('szam').innerHTML
+        let vszam1=+document.getElementById('szam1').innerHTML
+            
+        let osszeg=vszam+vszam1
+            
+        }
+
+        function eredmeny(){
+            let valasz=document.getElementById('valasz').value
+            
+
+            console.log(osszeg)
+
+
+
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <p class="result"></p>
+    <div id="szam"></div>
+    <p id="nagyobb"> A nagyobb szám:</p>
+
+    <script>
+        function osszead(a, b, c=0){
+            return a+b+c
+        }
+        let s1=10,s2=30
+        console.log(osszead(s1,s2))
+
+        document.querySelector('div').innerHTML=`Az eredmény: ${osszead(s1,s2)}`
+
+/*
+
+        const add=(a,b)=>a+b
+        document.querySelector('.result').innerHTML=`Nyíl függvénnyel. ${add(s1,s2)}`
+
+
+        let val="egy"
+        if(val=="egy" || val=="kettő" || val=="1" || val=="2")
+            document.querySelector('#szam').innerHTML=val
+
+        let val2="2"
+        if(["egy","ketto","1","2"].includes(val2))
+            document.getElementById('szam2').innerHTML=val2
+
+*/
+        
+        //önallo
+
+        function nagyobb(sz1,sz2){
+            if(sz1>sz2)
+                return sz1
+            return sz2
+        }
+        let sz1=5,sz2=10
+        document.querySelector('#nagyobb').innerHTML+=nagyobb(5,10)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+1,Határozza meg és írja ki a képernyőre, hogy hány hegy található az állományban!
+	SELECT count(az) FROM csucs;
+2,
+Határozza meg és írja ki a képernyőre az állományban található hegyek átlagmagasságát!
+	SELECT AVG(magassag) as "Átlagmagasság" FROM csucs;
+3,
+Határozza meg és írja ki a képernyőre a legmagasabb hegy adatait!
+Feltételezheti, hogy nem alakult ki holtverseny.
+	SELECT nev, max(magassag) ,orszag FROM csucs;	
+4,
+Határozza meg és írja ki a képernyőre azoknak a hegycsúcsoknak a számát, amelyek 8500 méternél magasabbak csökkenő sorrendben!
+	SELECT nev, magassag FROM csucs WHERE magassag>8500 ORDER by magassag DESC;
+5,
+Határozza meg és írja ki a képernyőre azoknak a hegycsúcsoknak a nevét, amelyeket még nem mászta meg senki!
+	SELECT nev FROM csucs where maszo is null;
+6,
+Határozza meg és írja ki a képernyőre azoknak a hegycsúcsoknak a nevét, amelyeket Nepálban helyezkednek el!
+	SELECT nev FROM csucs WHERE ország like "%Nepál%";
